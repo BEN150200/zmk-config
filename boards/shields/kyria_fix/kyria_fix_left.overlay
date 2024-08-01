@@ -1,10 +1,4 @@
-/*
- * Copyright (c) 2020 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
-
-#include "kyria.dtsi"
+#include "kyria_fix.dtsi"
 
 &kscan0 {
     row-gpios

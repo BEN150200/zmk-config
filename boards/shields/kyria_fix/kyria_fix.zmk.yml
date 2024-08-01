@@ -1,5 +1,5 @@
 file_format: "1"
-id: kyria
+id: kyria_fix
 name: Kyria
 type: shield
 url: https://splitkb.com/products/kyria-pcb-kit
@@ -11,5 +11,5 @@ features:
   - encoder
   - underglow
 siblings:
-  - kyria_left
-  - kyria_right
+  - kyria_fix_left
+  - kyria_fix_right

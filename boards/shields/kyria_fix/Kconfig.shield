@@ -1,0 +1,5 @@
+config SHIELD_KYRIA_FIX_LEFT
+    def_bool $(shields_list_contains,kyria_fix_left)
+
+config SHIELD_KYRIA_FIX_RIGHT
+    def_bool $(shields_list_contains,kyria_fix_right)
