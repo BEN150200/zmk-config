@@ -11,6 +11,7 @@
 
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h> 
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
@@ -69,15 +70,15 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
         function_layer {
         //   ___________________________________                             ___________________________________
-        // || BLE | BT0 | BT1 | BT2 | BT3 | BT4 ||                         ||     |     |     |     |     |     ||
-        // || USB | F1  | F2  | F3  | F4  | F5  ||__________     __________|| F6  | F7  | F8  | F9  | F10 |     ||
-        // || PWR | F11 |     |BTCLR| RST |     |     |     || ||     |     |     |     |     |     | F12 |     ||
+        // || BLE | BT0 | BT1 | BT2 | BT3 | BT4 ||                         || RGB | EF- | EF+ | SP- | SP+ | DEL ||
+        // || USB | F1  | F2  | F3  | F4  | F5  ||__________     __________|| F6  | F7  | F8  | F9  | F10 | PSC ||
+        // || PWR | F11 |     |BTCLR| RST |     |     |     || ||     |     | HU- | HU- | BR- | BR+ | F12 |     ||
         //   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾||  ▼  |  ▼  |  ▼  |  ▼  |  ▼  || ||  ▼  |  ▼  |  ▼  |  ▼  |  ▼  ||‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
         //                     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ 
             bindings = <
-                &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                              &none  &none  &none  &none  &none   &kp DEL 
+                &out OUT_BLE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4            &rgb_ug RGB_TOG &rgb_ug RGB_EFR &rgb_ug RGB_EFF &rgb_ug RGB_SPD &rgb_ug RGB_SPI &kp DEL 
                 &out OUT_USB &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                                    &kp 6  &kp F7 &kp F8 &kp F9 &kp F10 &kp PSCRN
-           &ext_power EP_TOG &kp F11      &none        &bt BT_CLR   &bootloader  &none       &none  &none    &none  &none  &none  &none  &none  &none  &kp F12 &none
+           &ext_power EP_TOG &kp F11      &none        &bt BT_CLR   &bootloader  &none       &none  &none    &none  &none  &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_BRD &rgb_ug RGB_BRI  &kp F12 &none
                                                        &trans       &trans       &trans      &trans &trans   &trans &trans &trans &trans &trans
             >;
         };
