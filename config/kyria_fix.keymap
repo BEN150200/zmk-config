@@ -51,10 +51,6 @@
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
-&leader {  // leader-key config
-    timeout-ms = <650>;
-};
-
 /* Timeless homerow mods */
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // left hand
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
@@ -125,8 +121,6 @@ ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-ta
 ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
 
 
-
-
 // ---------------------------------------------------------------------------------------------------------------------------------
 //  ╭─────┬─────┬─────┬─────┬─────┬─────╮                         ╭─────┬─────┬─────┬─────┬─────┬─────╮
 //  | ESC |  Q  |  W  |  E  |  R  |  T  |                         |  Y  |  U  |  I  |  O  |  P  |BSPC |
@@ -145,7 +139,7 @@ ZMK_LAYER(default_layer,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮    ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B         XXX           XXX                XXX           XXX           &kp N         &kp M         &kp ES_COMMA  &kp ES_DOT    &kp ES_MINUS  &kp RSHFT
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                   XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &mo SYM            SMART_NUM     &smart_shft     &kp LALT      &mo FUN       XXX
+                                                   XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &lt SYM            SMART_NUM     &smart_shft   &kp LALT      &lt FUN       XXX
     //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
     // Sensors
         ,&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
