@@ -79,7 +79,7 @@ ZMK_MOD_MORPH(smart_shft,
     mods = <(MOD_LSFT)>;
 )
 &caps_word {  // mods deactivate caps-word, requires PR #1451
-    /delete-property/ ignore-modifiers;
+    /*delete-property*/ ignore-modifiers;
 };
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
@@ -110,11 +110,6 @@ ZMK_TAP_DANCE(copy_cut,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
-// tap: backspace | shift + tap: delete | hold: num layer
-ZMK_MOD_MORPH(bs_del_num,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
 
 // combos
 ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
