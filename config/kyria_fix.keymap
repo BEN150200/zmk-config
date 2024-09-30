@@ -72,7 +72,7 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 /* Caps-word, num-word */
-
+/*
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_MOD_MORPH(smart_shft,
     bindings = <&sk LSHFT>, <&caps_word>;
@@ -81,6 +81,7 @@ ZMK_MOD_MORPH(smart_shft,
 &caps_word {  // mods deactivate caps-word, requires PR #1451
     ignore-modifiers;  
 };
+*/
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
@@ -134,7 +135,7 @@ ZMK_LAYER(default_layer,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮    ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B         XXX           XXX                XXX           XXX           &kp N         &kp M         &kp ES_COMMA  &kp ES_DOT    &kp ES_MINUS  &kp RSHFT
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                   XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &lt SYM            SMART_NUM     &smart_shft   &kp LALT      &lt FUN       XXX
+                                                   XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &lt SYM            SMART_NUM     &kp SPACE   &kp LALT      &lt FUN       XXX
     //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
     // Sensors
         ,&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
