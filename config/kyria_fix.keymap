@@ -99,23 +99,28 @@ ZMK_TAP_DANCE(num_dance,
 
 
 /* Custom behaviors */
+/*
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     keep-mods = <MOD_RSFT>;
 )
+*/
 
+/*
 // tap: copy | double-tap: cut
 ZMK_TAP_DANCE(copy_cut,
     tapping-term-ms = <200>;
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
+*/
 
 // combos
+/*
 ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
 ZMK_COMBO(paste,    &kp LS(INS), LB1 LB2, ALL)  // paste, active on all layers
-
+*/
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 //  ╭─────┬─────┬─────┬─────┬─────┬─────╮                         ╭─────┬─────┬─────┬─────┬─────┬─────╮
@@ -131,14 +136,14 @@ ZMK_LAYER(default_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                            ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
          &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T                                                                      &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSPC
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                            ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &kp TAB       &kp A         &hml LALT S   &hml  LSHFT D &hml LCTRL F  &kp G                                                                      &kp H         &hmr LCTRL J  &hmr LSHFT K  &hmr LALT L   &hmr LGUI ES_N_TILDE &kp RET
+         &kp TAB       &kp A         &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G                                                                      &kp H         &hmr LCTRL J  &hmr LSHFT K  &hmr LALT L   &hmr LGUI ES_N_TILDE &kp RET
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮    ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B         XXX           XXX                XXX           XXX           &kp N         &kp M         &kp ES_COMMA  &kp ES_DOT    &kp ES_MINUS  &kp RSHFT
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                    XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &lt SYM            SMART_NUM     &kp SPACE     &kp LALT      &lt FUN       XXX
     //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
     // Sensors
-        ,&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
+        , &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
 )
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -175,9 +180,9 @@ ZMK_LAYER(symbol_layer,
 //                    ╰─────┴─────┴─────┴─────┴─────╯ ╰─────┴─────┴─────┴─────┴─────╯
 ZMK_LAYER(number_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                            ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-         ___           XXX           &kp HOME      &kp UP        &kp END       XXX                                                                        &kp ES_STAR   &kp KP_N7     &kp KP_N8     &kp KP_N9     XXX &kp       ___
+         ___           XXX           &kp HOME      &kp UP        &kp END       XXX                                                                        &kp ES_STAR   &kp KP_N7     &kp KP_N8     &kp KP_N9     XXX           ___
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                            ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___           XXX           &kp LEFT      &kp DOWN      &kp RIGHT     XXX                                                                        &kp ES_PLUS   &hmr LCTRL KP_N4 &hmr LSHFT KP_N5 &hmr LALT KP_N6 XXX   XXX
+         ___           XXX           &kp LEFT      &kp DOWN      &kp RIGHT     XXX                                                                        &kp ES_PLUS  &hmr LCTRL KP_N4 &hmr LSHFT KP_N5 &hmr LALT KP_N6 XXX    XXX
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮    ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          ___           XXX           XXX           XXX           XXX           XXX           XXX           XXX                XXX           XXX           &kp KP_N0     &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp ES_DOT    &kp ES_COMMA
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
