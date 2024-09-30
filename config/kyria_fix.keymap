@@ -72,7 +72,6 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 /* Caps-word, num-word */
-/*
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_MOD_MORPH(smart_shft,
     bindings = <&sk LSHFT>, <&caps_word>;
@@ -81,7 +80,7 @@ ZMK_MOD_MORPH(smart_shft,
 &caps_word {  // mods deactivate caps-word, requires PR #1451
     ignore-modifiers;  
 };
-*/
+
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
@@ -96,8 +95,8 @@ ZMK_TAP_DANCE(num_dance,
     bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
 
-/* Custom behaviors */
 
+/* Custom behaviors */
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
@@ -110,7 +109,6 @@ ZMK_TAP_DANCE(copy_cut,
     tapping-term-ms = <200>;
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
-
 
 // combos
 ZMK_COMBO(copy_cut, &copy_cut,   LB2 LB3, ALL)  // copy on tap, cut on double-tap, active on all layers
@@ -135,7 +133,7 @@ ZMK_LAYER(default_layer,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮    ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B         XXX           XXX                XXX           XXX           &kp N         &kp M         &kp ES_COMMA  &kp ES_DOT    &kp ES_MINUS  &kp RSHFT
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                   XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &lt SYM            SMART_NUM     &kp SPACE   &kp LALT      &lt FUN       XXX
+                                                   XXX           &kp LGUI      &kp LCTRL     &kp SPACE     &lt SYM            SMART_NUM     &smart_num    &kp LALT      &lt FUN       XXX
     //                                           ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
     // Sensors
         ,&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
@@ -206,7 +204,7 @@ ZMK_LAYER(function_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                            ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
          BT_MODE                                   BT_SEL_KEYS                                                                                                                      RGB_EFECT_KEYS                              &kp DEL 
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                            ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         OUT_USB       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                                                     &kp 6         &kp F7        &kp F8        &kp F9        &kp F10       &kp PSCRN
+         USB_MODE       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                                                     &kp 6         &kp F7        &kp F8        &kp F9        &kp F10       &kp PSCRN
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮    ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          XXX           &kp F11       XXX           &bt BT_CLR    &bootloader   XXX           XXX           XXX                XXX           XXX                                     RGB_COLOR_KEYS                &kp F12       KP_NUM
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
