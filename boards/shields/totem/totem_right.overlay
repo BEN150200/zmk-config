@@ -5,6 +5,7 @@
  */
 
 #include "totem.dtsi"
+#include <physical_layouts.dtsi>
 
 &default_transform {
     col-offset = <5>;
