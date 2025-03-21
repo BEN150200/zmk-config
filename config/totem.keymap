@@ -43,7 +43,6 @@
 /* Global settings */
 
 &caps_word {  
-    ignore-numbers;
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS>;
 };
 
