@@ -5,7 +5,6 @@
  */
 
 #include "totem.dtsi"
-#include <physical_layouts.dtsi>
 
 &kscan0 {
     col-gpios
