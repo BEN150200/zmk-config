@@ -103,7 +103,7 @@ ZMK_LAYER(default_layer,
 //                                     ┃    DEL    ┃  TAB/NAV  ┃    SPC    ┃   ┃    NUM    ┃           ┃   BSPC    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
-                &kp A       &hml LALT s &hml LSHFT D &hml LCTRL F &kp G         &kp H       &hmr LCTRL J &hmr LSHFT K &hmr LALT L  &hmr LGUI ES_N_TILDE
+                &kp A       &hml LALT S &hml LSHFT D &hml LCTRL F &kp G         &kp H       &hmr LCTRL J &hmr LSHFT K &hmr LALT L  &hmr LGUI ES_N_TILDE
     &kp TAB     &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp ES_COMMA &kp ES_DOT &kp ES_MINUS &kp RET
                                         &lt FUN DEL &kp SPACE   &mo SYM         SMART_NUM   &kp BSPC    &kp RET       
 )
