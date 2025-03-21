@@ -8,7 +8,7 @@
 #include "totem-layout.dtsi"
 
 &totem_layout {
-    transform = <&default_transform>
+    transform = <&default_transform>;
 };
 
 / {
