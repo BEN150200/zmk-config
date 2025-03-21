@@ -102,7 +102,6 @@ ZMK_LAYER(default_layer,
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    DEL    ┃  TAB/NAV  ┃    SPC    ┃   ┃    NUM    ┃           ┃   BSPC    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &mt A       &hml LALT s &hml LSHFT D &hml LCTRL F &kp G         &kp H       &hml LCTRL J &hml LSHFT K &hml LALT L  &hml LGUI ES_N_TILDE
     &kp TAB     &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp ES_COMMA &kp ES_DOT &kp ES_MINUS &kp RET
@@ -121,7 +120,6 @@ ZMK_LAYER(symbol_layer,
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
                 &kp ES_EXCL &kp ES_AT   &kp ES_HASH &kp ES_DLLR &kp ES_PRCNT    &kp ES_FSLH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_EQUAL &kp ES_QMARK       
                 &kp EQUAL   &kp ES_GRAVE &kp ES_DQT &kp ES_SQT  &kp ES_AMPS     &kp ES_BSLH  &kp RA(SQT)  &kp RA(BSLH) &kp ES_CARET &kp ES_IQMARK
     &kp ES_ORDF &kp ES_MDOT &kp ES_ACUTE &kp ES_LT  &kp ES_GT   &kp ES_PIPE     &kp BSLH     &kp RA(LBKT) &kp RA(RBKT) &kp ES_TILDE &kp ES_NOT &kp ES_UMLAUT       
