@@ -30,7 +30,7 @@
 /* Global settings */
 
 &caps_word {  
-    /delete-property/ ignore-numbers;
+    ignore-numbers;
     continue-list = <BACKSPACE ENTER DELETE UNDERSCORE MINUS>;
 };
 
