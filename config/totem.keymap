@@ -64,15 +64,16 @@ ZMK_LAYER(default_layer,
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &hml LALT S &hml LSHFT D &hml LCTRL F &kp G         &kp H       &hmr LCTRL J &hmr LSHFT K &hmr LALT L  &hmr LGUI ES_N_TILDE
     &kp TAB     &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp ES_COMMA &kp ES_DOT &kp ES_MINUS &kp RET
-                                        &mo FUN      &kp SPACE   &mo SYM        SMART_NUM   &kp BSPC    &kp RET       
+                                        &mo FUN      &kp SPACE   &mo SYM        SMART_NUM   &kp BSPC    &kp RET
 )
-ZMK_LAYER(symbol_layer,
+
+/* ZMK_LAYER(symbol_layer,
                 &kp ES_EXCL &kp ES_AT   &kp ES_HASH &kp ES_DLLR &kp ES_PRCNT    &kp ES_FSLH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_EQUAL &kp ES_QMARK       
                 &kp EQUAL   &kp ES_GRAVE &kp ES_DQT &kp ES_SQT  &kp ES_AMPS     &kp ES_BSLH  &kp RA(SQT)  &kp RA(BSLH) &kp ES_CARET &kp ES_IQMARK
     &kp ES_ORDF &kp ES_MDOT &kp ES_ACUTE &kp ES_LT  &kp ES_GT   &kp ES_PIPE     &kp BSLH     &kp RA(LBKT) &kp RA(RBKT) &kp ES_TILDE &kp ES_NOT &kp ES_UMLAUT       
                                         ____        ____        ____            ____         ____         ____      
-)
-ZMK_LAYER(number_layer,
+) */
+/* ZMK_LAYER(number_layer,
                 &kp ESC     &kp HOME    &kp UP       &kp END      XXX           &kp ES_STAR &kp KP_N7   &kp KP_N8   &kp KP_N9     XXX
                 XXX         &kp LEFT    &kp DOWN     &kp RIGHT    XXX           &kp ES_PLUS &hmr LCTRL KP_N4 &hmr LSHFT KP_N5 &hmr LALT KP_N6 XXX
     ___         XXX         XXX         XXX          XXX          XXX           &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp ES_DOT  &kp ES_COMMA
@@ -85,3 +86,4 @@ ZMK_LAYER(function_layer,
     &trans      &trans      &bt BT_PRV  &trans      &trans      &trans          &trans      &kp F1      &kp F2      &kp F3      &kp F10     &trans         
                                         &trans      &trans      &trans          &trans      &trans      &trans      
 )
+ */
