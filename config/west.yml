@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
 
   projects:
     - name: zmk
@@ -31,6 +33,10 @@ manifest:
           - hal_stm32
           - lvgl
           - tinycrypt
+
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: main
 
   self:
     path: config
